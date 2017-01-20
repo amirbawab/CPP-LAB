@@ -89,6 +89,6 @@ int main() {
 Following the compiling steps:  
 1. Preprocess `g++ -E <file.cpp>` (this is just for testing, preprocess is done automatically by g++ in step 2)  
 2. Compile (to avoid auto linking, use `-c` flag): `g++ -c <file.cpp>`. Should succeed  
-3. Link (create executable): `g++ -o <exec> <file.o>`. Should fail  
+3. Link (create executable): `g++ -o <exec> <file.o>`. Should fail because the implementation of `test()` was not found   
 
 More information: `g++ --help`
