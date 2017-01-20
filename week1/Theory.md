@@ -52,3 +52,24 @@ The `include` can be of the following forms:
 ##### Comment 2
 The output of this program would be: 5  
 *Try `g++ -E <file.cpp>`*
+
+#### Block 2
+```
+int main() {
+    return 3;
+}
+```
+
+##### Comment 1
+The return value is very important, especially for scripting (e.g. BASH, Python etc...).
+```
+./a.out
+RET="$?"
+
+if [[ $RET -eq 3 ]]
+then
+    echo "File returned 3"
+else
+    echo "File did not return 3"
+fi
+```
