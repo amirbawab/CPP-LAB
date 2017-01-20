@@ -31,3 +31,24 @@ g++ -E <file>
 **Linker**: It links all the object files by replacing the references to undefined symbols with the correct addresses. Each of these symbols can be defined in other object files or in libraries. If they are defined in libraries other than the standard library, you need to tell the linker about them.
 
 More information: http://stackoverflow.com/a/6264256/3435918
+
+#### Block 1
+
+```
+#include "iostream"
+#define ADD 1+2
+int main() {
+    std::cout << ADD * ADD << std::endl;
+    return 1;
+}
+```
+
+##### Comment 1
+The `include` can be of the following forms:
+`#include <iostream>` (1) or `#include "my-file.h"` (2)  
+(1) searches in default paths plus others defined manually (e.g. Using `-I` flag)
+(2) searches in the project. If not found, goes to (1)
+
+##### Comment 2
+The output of this program would be: 5  
+*Try `g++ -E <file.cpp>`*
