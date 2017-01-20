@@ -44,9 +44,9 @@ int main() {
 ```
 
 ##### Comment 1
-The `include` can be of the following forms:
+The `include` can be of the following forms:  
 `#include <iostream>` (1) or `#include "my-file.h"` (2)  
-(1) searches in default paths plus others defined manually (e.g. Using `-I` flag)
+(1) searches in default paths plus others defined manually (e.g. Using `-I` flag)  
 (2) searches in the project. If not found, goes to (1)
 
 ##### Comment 2
