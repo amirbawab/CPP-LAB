@@ -29,3 +29,5 @@ g++ -E <file>
 **Compiler:** Object files can refer to symbols that are not defined. This is the case when you use a declaration, and don't provide a definition for it. The compiler doesn't mind this, and will happily produce the object file as long as the source code is well-formed.
 
 **Linker**: It links all the object files by replacing the references to undefined symbols with the correct addresses. Each of these symbols can be defined in other object files or in libraries. If they are defined in libraries other than the standard library, you need to tell the linker about them.
+
+More information: http://stackoverflow.com/a/6264256/3435918
