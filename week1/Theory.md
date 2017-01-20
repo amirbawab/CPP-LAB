@@ -21,6 +21,8 @@ g++ -E <file>
 
 #### C++ header files
 - A header file is like an interface in Java.
+- Needed if developing a staic/dynamic library.
+- Helps working in teams. (e.g. Team A works on a program and produce a library A.so, Team B uses the library produced by Team A, so Team B copies the header files created by Team A (Header files do not change much because one team defines the declarations and the other team make calls to the declarations) and downloades the latest version of A.so present in the artifactory)
 
 #### C++ Compiling steps
 
