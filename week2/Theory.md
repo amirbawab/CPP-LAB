@@ -78,3 +78,18 @@ int main() {
 
 ##### Comment 1:
 Does not compile because a is not a pointer
+
+#### Lifetime of variables
+
+##### Static variables
+
+The lifetime of function static variables begins the first time the program flow encounters the declaration and it ends at program termination. This means that the run-time must perform some book keeping in order to destruct it only if it was actually constructed.   
+http://stackoverflow.com/questions/246564/what-is-the-lifetime-of-a-static-variable-in-a-c-function
+
+Also destructor are executed in reverse order
+
+#### Global variables
+
+The lifetime of function global variales begins the first time the program flow encounters the declaration and it ends at program termination.
+
+Destructor after static and are executed in reverse order (C++11)
