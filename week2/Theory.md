@@ -47,16 +47,34 @@ int main() {
 
 #### Pointers
 
+##### Block 1:
 ```
-| add1 | val1 |
-| add2 | val2 |
-| add3 | val3 |
-| add4 | val4 |
-...
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double a = 1;
+    double *c = &a;
+    cout << "&a:" << &a << endl<< "a:" << a << endl << "c:" << c << endl << "&c:" << &c << endl;
+    return 0;
+}
+```
+##### Comment 1:
+value of a and c should be the same
+
+##### Block 2:
+```
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double a = 1;
+    cout << &*a << endl;
+    return 0;
+}
 ```
 
-If a type has `*`, then the variable value contains values of the first column. If a not, then it's the second column.
-
-If the variable is of type pointer to "something", then we can obtain its actual value its pointing to using `*`. If the variable is not of type pointer to "something", then we can obtain its address holding it using `&`.
-
-
+##### Comment 1:
+Does not compile because a is not a pointer
