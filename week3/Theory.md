@@ -53,6 +53,8 @@ Person g1(-2);
 
 int main(int argc, char *argv[]) {
 
+    std::cout << "Start main" << std::endl;
+
     // Create local in f1
     f1();
 
@@ -85,6 +87,7 @@ g++ main.cpp Person.cpp -o run && ./run
 
 Person: -2 created!
 Person: -1 created!
+Start main
 Person: 0 created!
 Person: 0 destroyed!
 Person: 1 created!
