@@ -100,3 +100,32 @@ Person: 5 destroyed!
 Person: -1 destroyed!
 Person: -2 destroyed!
 ```
+
+### Friend member
+```
+#include <iostream>
+
+class Person {
+public:
+    Person(int age) : age(age) {}
+    friend std::ostream& operator<<(std::ostream& stream, const Person &p);
+private:
+    int age;
+};
+
+std::ostream& operator<<(std::ostream& stream, const Person &p) {
+    stream << "Age: " << p.age;
+    return stream;
+}
+
+int main() {
+    Person p1(3);
+    std::cout << p1 << std::endl;
+    return 0;
+}
+```
+
+#### Output
+```
+Age: 3
+```
