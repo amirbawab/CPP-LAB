@@ -59,3 +59,43 @@ int main() {
 This does not compile because the outer dimension should always be specified when an array is delcared as parameter in a function.
 
 Reference: http://stackoverflow.com/questions/17662507/c-array-as-parameter-why-do-you-only-need-to-specify-outer-dimension
+
+### Block 3
+```
+#include <iostream>
+#include <iomanip>
+#include <vector>
+
+using namespace std;
+
+
+int main() {
+    cout << setw(10) << 1.0 
+        << setw(10) <<  2.0 
+        << setw(10) <<  3.0 
+        << endl;
+
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(1);
+    
+    cout << setw(10) << 1.0 
+        << setw(10) <<  2.0 
+        << setw(10) <<  3.0 
+        << endl;
+    return 0;
+}
+```
+
+#### Comment 1
+Output:
+```
+         1         2         3
+       1.0       2.0       3.0
+```
+
+#### Comment 2
+setw(#):  Sets the field width to be used on output operations.  
+ios::showpoint: Show decimal point (this will show the point)  
+ios::fixed: Use fixed floating-point notation  
+ios::precision: Set decimal precision  
