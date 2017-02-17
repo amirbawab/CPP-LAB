@@ -172,7 +172,7 @@ Parent class area
 Early binding, decision at compile-time
 
 #### Comment 2
-What if we add `virutal` before the function `area` definition in the `Shape` class ?  
+What if we add `virtual` before the function `area` definition in the `Shape` class ?  
 Output
 ```
 Rectangle class area
