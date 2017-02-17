@@ -181,5 +181,6 @@ Triangle class area
 Late binding, decision at runtime
 
 #### Comment 3
-What if we change the definition of area function to: `virtual area()=0;` ?  
-This is equivalent to abstract methods in Java.
+What if we change the definition of area function to: `virtual area()=0;` (pure virtual) ?  
+This is equivalent to abstract methods in Java. Function must be implemented in children classes otherwise can't create instances of those children.  
+Pure virtual functions implies that the class is abstract and no instances of it can be created (useful for polymorphism).
