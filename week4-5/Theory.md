@@ -30,6 +30,8 @@ The output will be:
 ```
 Arrays cannot be passed by value (copy). However, you can pass objects by value (like a vector).
 
+Reference: http://stackoverflow.com/questions/7454990/why-cant-we-pass-arrays-to-function-by-value
+
 
 ### Block 2
 
@@ -55,3 +57,5 @@ int main() {
 #### Comment 1
 
 This does not compile because the outer dimension should always be specified when an array is delcared as parameter in a function.
+
+Reference: http://stackoverflow.com/questions/17662507/c-array-as-parameter-why-do-you-only-need-to-specify-outer-dimension
