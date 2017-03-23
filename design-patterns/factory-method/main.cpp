@@ -15,5 +15,10 @@ int main() {
 
     std::cout << "solidFrame->print(): " << endl;
     solidFrame->print();
+
+    delete dashdeFrame;
+    delete dottedFrame;
+    delete solidFrame;
+
     return 0;
 }
