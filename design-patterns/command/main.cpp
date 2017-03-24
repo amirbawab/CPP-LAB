@@ -28,5 +28,14 @@ int main() {
     controller->press(backwardCommand);
     controller->press(leftCommand);
     controller->press(rightCommand);
+    
+    // Delete pointers
+    delete controller;
+    delete forwardCommand;
+    delete backwardCommand;
+    delete leftCommand;
+    delete rightCommand;
+    delete car;
+    
     return 0;
 }
