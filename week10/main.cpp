@@ -63,7 +63,60 @@ int main() {
         cout << "Unhandled type" << endl; 
     }
 
-    // Example 6 - Non-Primitive types: slicing
-    cout << endl << "Example 5" << endl << "----------" << endl;
-    return 0;
+    // Example 6.1 - Non-Primitive types: slicing
+    cout << endl << "Example 6.1" << endl << "----------" << endl;
+    class Parent {};
+    class Child : public Parent{};
+    try {
+        throw Child();
+    } catch(Parent &p) {
+        cout << "Sliced to parent!" << endl;
+    } catch(Child &c) {
+        cout << "Child exception!" << endl;
+    }
+
+    // Example 6.2 - Non-Primitive types: catch correct order
+    cout << endl << "Example 6.2" << endl << "----------" << endl;
+    try {
+        throw Child();
+    } catch(Child& c) {
+        cout << "Child exception!" << endl;
+    } catch(Parent& p) {
+        cout << "Parent exception!" << endl;
+    }
+
+    // Example 6.3 - Non-Primitive types: catch with pointers
+    cout << endl << "Example 6.3" << endl << "----------" << endl;
+    try {
+        throw new Child();
+    } catch(Parent* p) {
+        cout << "Polymorphism!" << endl;
+    } catch(Child* c) {
+        cout << "Child pointer exception!" << endl;
+    }
+
+    // Example 7 - Unhandled
+    cout << endl << "Example 7" << endl << "----------" << endl;
+    try {
+        // throw 1;
+    } catch(char c) {
+        cout << "char exception!" << endl;
+    }
+    cout << "'throw 1' terminates the program" << endl;
+
+    // Example 8 - Nested try
+    cout << endl << "Example 8" << endl << "----------" << endl;
+    try {
+        try {
+            throw 11;
+        } catch(int e) {
+            cout << "Inner scope: " << e << endl;
+            throw;
+        }
+    } catch(int e) {
+        cout << "Outer scope: " << e << endl;
+    }
+
+
+    return 0; 
 }
