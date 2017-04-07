@@ -30,5 +30,10 @@ int main() {
     userCRUDRESTAdapter->read(1);
     userCRUDRESTAdapter->remove(1);
 
+    // Delete pointers
+    delete userCRUDRESTAdapter;
+    delete userCRUDREST;
+    delete userCRUDNative;
+    
     return 0;
 }
