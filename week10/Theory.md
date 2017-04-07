@@ -2,7 +2,7 @@
 
 Examples can be found in the file <a href="https://github.com/amirbawab/CPP-LAB/blob/master/week10/main.cpp">main.cpp</a>
 
-To compile:  
+To compile and run:  
 ```
 g++ -o run main.cpp && ./run
 ```
