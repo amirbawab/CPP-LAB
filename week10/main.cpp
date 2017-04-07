@@ -8,6 +8,7 @@ int main() {
     cout << "Example 1" << endl << "----------" << endl;
     try {
         throw 123;
+        cout << "Won't be printed!" << endl;
     } catch(int e){
         cout << "Error: " << e << endl;
     }
@@ -117,6 +118,19 @@ int main() {
         cout << "Outer scope: " << e << endl;
     }
 
+    // Example 9 - Destructor executed before catch
+    cout << endl << "Example 9" << endl << "----------" << endl;
+    class Book {
+    public:
+        Book(){cout<<"Book created!"<<endl;}
+        ~Book(){cout<<"Book destroyed!"<<endl;}
+    };
+    try{
+        Book b;
+        throw 1;
+    }catch(int e){
+        cout << "int exception!" << endl;
+    }
 
     return 0; 
 }
