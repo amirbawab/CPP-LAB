@@ -1,6 +1,6 @@
 ### Templates
 
-Simple example:
+#### Example 1
 ```C++
 #include <iostream>
 #include <typeinfo>
@@ -28,6 +28,44 @@ int main() {
 }
 ```
 
+#### Example 2
+```C++
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+template<class T1, class T2>
+class Node {
+    T1 data1;
+    T2 data2;
+public:
+    void setData1(T1 data1);
+    void setData2(T2 data2);
+    T1 getData1() const{ return data1;}
+    T2 getData2() const{ return data2;}
+};
+
+template <class T1, class T2>
+void Node<T1,T2>::setData1(T1 data1) {
+    this->data1 = data1;
+}
+
+
+template <class T1, class T2>
+void Node<T1,T2>::setData2(T2 data2) {
+    this->data2 = data2;
+}
+
+int main() {
+    Node<int, float> node;
+    node.setData1(123);
+    node.setData2(321.123);
+    cout << node.getData1() << endl;
+    cout << node.getData2() << endl;
+    return 0;
+}
+```
 #### Difference between `template <class T>` and `template <typename T>`
 
 > Stan Lippman talked about this here. I thought it was interesting.
