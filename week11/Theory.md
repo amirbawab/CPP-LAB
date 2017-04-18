@@ -66,6 +66,27 @@ int main() {
     return 0;
 }
 ```
+
+#### Example 3
+```C++
+#include <iostream>
+#include <string>
+#include <typeinfo>
+
+using namespace std;
+
+template<class T=double>
+struct A{
+    T data;
+};
+
+int main() {
+    A<> a;
+    cout << "Type: " << typeid(a.data).name() << endl;
+    return 0;
+}
+```
+
 #### Difference between `template <class T>` and `template <typename T>`
 
 > Stan Lippman talked about this here. I thought it was interesting.
