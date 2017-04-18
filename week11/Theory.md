@@ -1,8 +1,31 @@
 ### Templates
 
 Simple example:
-```
+```C++
+#include <iostream>
+#include <typeinfo>
+#include <string>
 
+using namespace std;
+
+template<class T>
+void detect(T t) {
+    cout << "Type: " << typeid(t).name() << ". Value: " << t << endl;
+}
+
+int main() {
+    // Specify template argument
+    detect<int>(24);
+    detect<float>(24.23);
+    detect<int>(24.23);
+    
+    // Template argument deduction
+    detect(24);
+    detect(24l);
+    detect(24.123);
+    detect(24.123f);
+    return 0;
+}
 ```
 
 #### Difference between `template <class T>` and `template <typename T>`
